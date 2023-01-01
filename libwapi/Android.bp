@@ -1,0 +1,67 @@
+mtk_cc_prebuilt_library {
+    arch: {
+        arm: {
+            cortex_a53: {
+                shared_libs: [
+                    "libkeystore-wifi-hidl",
+                    "libcrypto",
+                    "liblog",
+                ],
+                srcs: [
+                    "arm_armv8-a_cortex-a53/libwapi.so",
+                ],
+            },
+            cortex_a55: {
+                shared_libs: [
+                    "libkeystore-wifi-hidl",
+                    "libcrypto",
+                    "liblog",
+                ],
+                srcs: [
+                    "arm_armv8-2a_cortex-a55/libwapi.so",
+                ],
+            },
+            cortex_a7: {
+                shared_libs: [
+                    "libkeystore-wifi-hidl",
+                    "libcrypto",
+                    "liblog",
+                ],
+                srcs: [
+                    "arm_armv7-a-neon_cortex-a7/libwapi.so",
+                ],
+            },
+        },
+        arm64: {
+            cortex_a53: {
+                shared_libs: [
+                    "libkeystore-wifi-hidl",
+                    "libcrypto",
+                    "liblog",
+                ],
+                srcs: [
+                    "arm64_armv8-a_cortex-a53/libwapi.so",
+                ],
+            },
+            cortex_a55: {
+                shared_libs: [
+                    "libkeystore-wifi-hidl",
+                    "libcrypto",
+                    "liblog",
+                ],
+                srcs: [
+                    "arm64_armv8-2a_cortex-a55/libwapi.so",
+                ],
+            },
+        },
+    },
+    mtk_product_line: "tablet",
+    mtk_src_path: "vendor/mediatek/proprietary/hardware/connectivity/wapi-v2",
+    mtk_type: "cc_prebuilt_library_shared",
+    name: "libwapi",
+    proprietary: true,
+    strip: {
+        none: true,
+    },
+}
+
